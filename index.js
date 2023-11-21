@@ -23,7 +23,7 @@ app.use("/animal", AnimalRoute);
 
 //Database
 mongoose.set('strictQuery', false);
-const mongoURL = `mongodb+srv://admin:${process.env.Mongo_DB_Password}@admin.dy2bovu.mongodb.net/Pets?retryWrites=true&w=majority`
+const mongoURL = `mongodb+srv://${process.env.Mongo_DB_Username}:${process.env.Mongo_DB_Password}@admin.dy2bovu.mongodb.net/Pets?retryWrites=true&w=majority`
 mongoose.connect(mongoURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
