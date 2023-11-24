@@ -7,6 +7,8 @@ const app = express();
 const PORT = 4000;
 const path = require("path");
 const AnimalRoute = require("./Routes/AnimalRoute")
+const authRoute = require("./Routes/AuthRoute")
+
 
 
 //Configurations
@@ -20,6 +22,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Routes
 app.use("/animal", AnimalRoute);
+app.use("/user", authRoute);
+
 
 //Database
 mongoose.set('strictQuery', false);
